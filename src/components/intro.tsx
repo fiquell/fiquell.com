@@ -5,7 +5,7 @@ import { developer, end, front } from "~/constants/intro";
 
 const Intro = () => {
   return (
-    <section className="my-10 lg:my-5">
+    <section className="mt-10 lg:mt-5">
       <div
         className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[22rem] ${bebasNeue.className}`}>
         <div className="flex flex-col md:flex-row md:items-center md:gap-2 lg:gap-16">
