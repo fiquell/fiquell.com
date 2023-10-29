@@ -13,7 +13,7 @@ const Header = () => {
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:gap-10 lg:gap-16">
           <div className="md:w-48 lg:w-[44rem]">
             <p>FRONTEND DEVELOPER</p>
-            <p>FOLIO / 2020 - {currentYear}</p>
+            <p>FOLIO / 2021 - {currentYear}</p>
           </div>
           <div>
             <p>AVAILABLE FOR FREELANCE</p>
