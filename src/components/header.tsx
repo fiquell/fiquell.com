@@ -21,7 +21,7 @@ const Header = () => {
           </div>
           <Link
             href="/"
-            className="w-fit rounded-full border-2 border-accent px-4 py-2 text-sm text-text md:text-xs lg:text-sm">
+            className="w-fit rounded-full border-2 border-accent px-3 py-1.5 text-sm text-text md:text-xs lg:text-sm">
             SAY HELLO
           </Link>
         </div>
