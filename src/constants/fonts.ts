@@ -1,22 +1,22 @@
 import localFont from "next/font/local";
 
-export const commissioner = localFont({
+export const opensaucesans = localFont({
   src: [
     {
-      path: "../../public/fonts/commissioner-regular.ttf",
+      path: "../../public/fonts/opensaucesans-regular.woff2",
       weight: "400",
     },
     {
-      path: "../../public/fonts/commissioner-medium.ttf",
-      weight: "500",
+      path: "../../public/fonts/opensaucesans-medium.woff2",
+      weight: "400",
     },
   ],
 });
 
-export const bebasNeue = localFont({
+export const bebasneue = localFont({
   src: [
     {
-      path: "../../public/fonts/bebas-neue-regular.ttf",
+      path: "../../public/fonts/bebasneue-regular.ttf",
       weight: "400",
     },
   ],

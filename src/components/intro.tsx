@@ -1,13 +1,13 @@
 import { Icon } from "@iconify/react";
 import Stripline from "~/components/stripline";
-import { bebasNeue } from "~/constants/fonts";
+import { bebasneue } from "~/constants/fonts";
 import { developer, end, front } from "~/constants/intro";
 
 const Intro = () => {
   return (
     <section className="mt-10 lg:mt-5">
       <div
-        className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[22rem] ${bebasNeue.className}`}>
+        className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[22rem] ${bebasneue.className}`}>
         <div className="flex flex-col md:flex-row md:items-center md:gap-2 lg:gap-16">
           <div className="flex">
             {front.map(({ id, text }) => (
@@ -35,7 +35,7 @@ const Intro = () => {
       </div>
       <div className="flex flex-col gap-5 md:-mt-5 md:flex-row md:items-center lg:-mt-10 lg:gap-10">
         <div
-          className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[22rem] ${bebasNeue.className}`}>
+          className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[22rem] ${bebasneue.className}`}>
           <div className="flex flex-wrap">
             {developer.map(({ id, text }) => (
               <p

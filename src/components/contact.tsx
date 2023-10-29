@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { bebasNeue } from "~/constants/fonts";
+import { bebasneue } from "~/constants/fonts";
 
 const Contact = () => {
   return (
@@ -13,7 +13,7 @@ const Contact = () => {
       <div>
         <div className="h-0.5 w-full bg-accent" />
         <p
-          className={`py-4 text-7xl leading-none tracking-tighter text-accent lg:text-[11rem] ${bebasNeue.className}`}>
+          className={`py-4 text-7xl leading-none tracking-tighter text-accent lg:text-[11rem] ${bebasneue.className}`}>
           LET&rsquo;S TALK &mdash; LET&rsquo;S COLLABORATE &mdash; SAY HELLO
           &mdash; WANNA BE STARTING SOMETHING?
         </p>
@@ -21,7 +21,7 @@ const Contact = () => {
       </div>
       <Link
         href="mailto:hello@fiquell.com"
-        className="block text-center text-lg uppercase">
+        className="block text-center text-lg">
         hello@fiquell.com
       </Link>
     </section>
