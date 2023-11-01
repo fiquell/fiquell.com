@@ -10,6 +10,6 @@ usage guidelines. Your respect for these guidelines is greatly appreciated.
 
 Copyright &copy; 2023 Fiquell. All rights reserved.
 
-Thank you for gracing this space with your presence and enjoying the creative
-world of [Fiquell](https://fiquell.com). Your support is truly inspiring!
-:rainbow:
+Enjoy your journey through the artistic world of
+[Fiquell](https://fiquell.com), to delve deeper into the creative world. Your
+support is inspiring, and I thank you for being here. :rainbow:
