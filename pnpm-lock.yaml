@@ -8,6 +8,9 @@ dependencies:
   "@t3-oss/env-nextjs":
     specifier: ^0.7.0
     version: 0.7.1(typescript@5.2.2)(zod@3.22.4)
+  gsap:
+    specifier: ^3.12.2
+    version: 3.12.2
   next:
     specifier: ^13.5.4
     version: 13.5.6(react-dom@18.2.0)(react@18.2.0)
@@ -2147,6 +2150,13 @@ packages:
         integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==,
       }
     dev: true
+
+  /gsap@3.12.2:
+    resolution:
+      {
+        integrity: sha512-EkYnpG8qHgYBFAwsgsGEqvT1WUidX0tt/ijepx7z8EUJHElykg91RvW1XbkT59T0gZzzszOpjQv7SE41XuIXyQ==,
+      }
+    dev: false
 
   /has-bigints@1.0.2:
     resolution:
