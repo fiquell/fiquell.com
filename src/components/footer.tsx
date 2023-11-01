@@ -18,7 +18,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="container flex items-center justify-between py-8">
+    <footer className="container mt-8 flex items-center justify-between py-8">
       <div className="flex items-center gap-4 md:text-xs lg:text-base">
         <p className="text-accent">LOMBOK, ID</p>
         <p>{currentTime}</p>
