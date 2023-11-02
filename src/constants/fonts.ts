@@ -8,7 +8,7 @@ export const opensaucesans = localFont({
     },
     {
       path: "../../public/fonts/opensaucesans-medium.woff2",
-      weight: "400",
+      weight: "500",
     },
   ],
 });
