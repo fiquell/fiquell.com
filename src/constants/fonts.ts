@@ -16,7 +16,7 @@ export const opensaucesans = localFont({
 export const bebasneue = localFont({
   src: [
     {
-      path: "../../public/fonts/bebasneue-regular.ttf",
+      path: "../../public/fonts/bebasneue-regular.woff2",
       weight: "400",
     },
   ],
