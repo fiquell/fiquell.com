@@ -55,9 +55,9 @@ const Contact = () => {
         <div className="mx-auto h-0.5 w-11/12 bg-accent" />
       </div>
       <Link
-        href="mailto:hello@fiquell.com"
+        href="mailto:fiquellh@gmail.com"
         className="block text-center text-lg md:text-base lg:text-lg">
-        hello@fiquell.com
+        fiquellh@gmail.com
       </Link>
     </section>
   );
