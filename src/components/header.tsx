@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Button from "~/components/ui/button";
 
 const Header = () => {
   const currentYear = new Date().getFullYear();
@@ -19,10 +20,8 @@ const Header = () => {
             <p>AVAILABLE FOR FREELANCE</p>
             <p>WORK FROM OCTOBER 2023</p>
           </div>
-          <Link
-            href="/"
-            className="w-fit rounded-full border-2 border-accent px-3 py-1.5 text-sm text-text md:text-xs lg:text-sm">
-            SAY HELLO
+          <Link href="/">
+            <Button>SAY HELLO</Button>
           </Link>
         </div>
       </div>

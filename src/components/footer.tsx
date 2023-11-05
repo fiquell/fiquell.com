@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Button from "~/components/ui/button";
 
 const Footer = () => {
   const [currentTime, setCurrentTime] = useState("");
@@ -24,15 +25,11 @@ const Footer = () => {
         <p>{currentTime}</p>
       </div>
       <div className="flex items-center gap-4">
-        <Link
-          href="https://github.com/fiquell"
-          className="rounded-full border-2 border-accent px-3 py-1.5 text-sm font-medium md:text-xs lg:text-sm">
-          <p>GITHUB</p>
+        <Link href="https://github.com/fiquell">
+          <Button>GITHUB</Button>
         </Link>
-        <Link
-          href="/"
-          className="rounded-full border-2 border-accent px-3 py-1.5 text-sm font-medium md:text-xs lg:text-sm">
-          <p>TOP</p>
+        <Link href="/">
+          <Button>TOP</Button>
         </Link>
       </div>
     </footer>
