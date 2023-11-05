@@ -7,9 +7,11 @@ const Header = () => {
 
   return (
     <header className="container mt-5 flex justify-between md:items-center">
-      <Link href="/">
-        <Image src="/logo.png" alt="Logo" width={55} height={55} />
-      </Link>
+      <div className="h-fit w-fit">
+        <Link href="/">
+          <Image src="/logo.png" alt="Logo" width={55} height={55} />
+        </Link>
+      </div>
       <div className="text-xs font-medium text-accent md:text-[10px] lg:text-xs">
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:gap-10 lg:gap-16">
           <div className="md:w-48 lg:w-[44rem]">
