@@ -33,14 +33,16 @@ const Contact = () => {
 
   return (
     <section className="mt-10 space-y-10 lg:mt-20 lg:space-y-20">
-      <p className="md:mx-auto md:w-1/2 md:text-center md:text-xs lg:text-base">
-        If you have any questions, interesting proposals or projects, or if you
-        are interested in collaborating on something, do not hesitate to contact
-        me. I am always open to new opportunities and excited to explore
-        potential partnerships.
-      </p>
+      <div className="container">
+        <p className="md:mx-auto md:w-1/2 md:text-center md:text-xs lg:text-base">
+          If you have any questions, interesting proposals or projects, or if
+          you are interested in collaborating on something, do not hesitate to
+          contact me. I am always open to new opportunities and excited to
+          explore potential partnerships.
+        </p>
+      </div>
       <div className="overflow-hidden">
-        <div className="h-0.5 w-full bg-accent" />
+        <div className="mx-auto h-0.5 w-11/12 bg-accent" />
         <div
           className={`py-4 text-8xl leading-none tracking-tighter text-accent lg:text-[11rem] ${bebasneue.className}`}>
           <div ref={marqueeRef} className="flex items-center gap-3">
@@ -50,7 +52,7 @@ const Contact = () => {
             </p>
           </div>
         </div>
-        <div className="h-0.5 w-full bg-accent" />
+        <div className="mx-auto h-0.5 w-11/12 bg-accent" />
       </div>
       <Link
         href="mailto:hello@fiquell.com"

@@ -11,7 +11,7 @@ const Home = () => {
         <title>Fiquell ✺ Frontend Developer</title>
       </Head>
       <Header />
-      <main className="container">
+      <main>
         <Intro />
         <Contact />
       </main>
