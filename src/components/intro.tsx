@@ -49,7 +49,7 @@ const Intro = () => {
         <div className="md:w-1/4 md:text-xs lg:mb-10 lg:text-base">
           <div className="mb-20 flex justify-end md:mb-5 lg:mb-20">
             <p className="w-3/4 md:w-full">
-              <span className="inline-block text-sm font-medium text-accent md:text-[10px] md:leading-normal lg:text-sm">
+              <span className="text-sm font-medium text-accent md:text-[10px] md:leading-normal lg:text-sm">
                 ABOUT &nbsp;
               </span>
               I am a developer based in Indonesia specializing in crafting
