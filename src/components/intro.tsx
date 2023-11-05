@@ -50,8 +50,8 @@ const Intro = () => {
           <div className="mb-20 flex justify-end md:mb-5 lg:mb-20">
             <p className="w-3/4 md:w-full">
               <span className="text-sm font-medium text-accent md:text-[10px] md:leading-normal lg:text-sm">
-                ABOUT &nbsp;
-              </span>
+                ABOUT
+              </span>{" "}
               I am a developer based in Indonesia specializing in crafting
               interactive digital experiences on the web. I collaborate with
               renowned brands and industry leaders to create engaging online
