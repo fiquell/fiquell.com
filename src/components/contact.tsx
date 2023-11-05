@@ -32,7 +32,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section className="mt-10 space-y-10 lg:mt-20 lg:space-y-20">
+    <section id="contact" className="mt-10 space-y-10 lg:mt-20 lg:space-y-20">
       <div className="container">
         <p className="md:mx-auto md:w-1/2 md:text-center md:text-xs lg:text-base">
           If you have any questions, interesting proposals or projects, or if

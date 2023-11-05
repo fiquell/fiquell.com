@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Button from "~/components/ui/button";
+import goto from "~/utils/goto";
 
 const Footer = () => {
   const [currentTime, setCurrentTime] = useState("");
@@ -28,9 +29,7 @@ const Footer = () => {
         <Link href="https://github.com/fiquell">
           <Button>GITHUB</Button>
         </Link>
-        <Link href="/">
-          <Button>TOP</Button>
-        </Link>
+        <Button onClick={() => goto("header")}>TOP</Button>
       </div>
     </footer>
   );
