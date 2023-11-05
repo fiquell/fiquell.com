@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import Stripline from "~/components/stripline";
+import Stripline from "~/components/ui/stripline";
 import { bebasneue } from "~/constants/fonts";
 import { developer, end, front } from "~/constants/intro";
 
@@ -20,7 +20,7 @@ const Intro = () => {
           </div>
           <Stripline className="hidden md:block" />
           <div className="flex items-center gap-4">
-            <Stripline className="md:hidden" />
+            <Stripline className="block md:hidden" />
             <div className="mr-2.5 flex lg:mr-5">
               {end.map(({ id, text }) => (
                 <p
