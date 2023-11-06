@@ -1,14 +1,46 @@
 import { Icon } from "@iconify/react";
+import { gsap } from "gsap";
+import { useEffect, useRef } from "react";
 import Stripline from "~/components/ui/stripline";
 import { bebasneue } from "~/constants/fonts";
 import { developer, end, front } from "~/constants/intro";
 
 const Intro = () => {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const frontendRef = useRef<HTMLDivElement | null>(null);
+  const developerRef = useRef<HTMLDivElement | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const animateElement = (
+        element: HTMLDivElement | null,
+        delay: number | string,
+      ) => {
+        gsap.from(element, {
+          delay,
+          duration: 0.5,
+          ease: "power4.out",
+          opacity: 0,
+          yPercent: 100,
+        });
+      };
+
+      animateElement(frontendRef.current, 0.5);
+      animateElement(developerRef.current, 0.7);
+      animateElement(contentRef.current, 0.9);
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="container mt-10">
+    <section ref={sectionRef} className="container mt-10">
       <div
         className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[22rem] ${bebasneue.className}`}>
-        <div className="flex flex-col md:flex-row md:items-center md:gap-2 lg:gap-16">
+        <div
+          ref={frontendRef}
+          className="flex flex-col md:flex-row md:items-center md:gap-2 lg:gap-16">
           <div className="flex">
             {front.map(({ id, text }) => (
               <p
@@ -36,7 +68,7 @@ const Intro = () => {
       <div className="flex flex-col gap-5 md:-mt-10 md:flex-row md:items-center lg:gap-10">
         <div
           className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[22rem] ${bebasneue.className}`}>
-          <div className="flex flex-wrap">
+          <div ref={developerRef} className="flex flex-wrap">
             {developer.map(({ id, text }) => (
               <p
                 key={id}
@@ -44,10 +76,12 @@ const Intro = () => {
                 {text}
               </p>
             ))}
-            <Stripline className="hidden h-1.5 rotate-3 md:block lg:hidden" />
+            <Stripline className="!mb-0 hidden !h-1.5 rotate-3 md:block lg:hidden" />
           </div>
         </div>
-        <div className="md:mt-8 md:w-1/4 md:text-xs lg:mb-16 lg:text-base">
+        <div
+          ref={contentRef}
+          className="md:mt-8 md:w-1/4 md:text-xs lg:mb-16 lg:text-base">
           <div className="mb-10 flex justify-end">
             <p className="w-3/4 md:w-full">
               <span className="text-sm font-medium text-accent md:text-[10px] md:leading-normal lg:text-sm">

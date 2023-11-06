@@ -1,13 +1,30 @@
+import { gsap } from "gsap";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import Button from "~/components/ui/button";
 import goto from "~/utils/goto";
 
 const Header = () => {
-  const currentYear = new Date().getFullYear();
+  const headerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(headerRef.current, {
+        delay: 0.3,
+        duration: 0.5,
+        ease: "power4.out",
+        opacity: 0,
+        yPercent: -100,
+      });
+    }, headerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <header
+      ref={headerRef}
       id="header"
       className="container mt-5 flex justify-between md:items-center">
       <div className="h-fit w-fit">
@@ -19,7 +36,7 @@ const Header = () => {
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:gap-10 lg:gap-16">
           <div className="md:w-48 lg:w-[44rem]">
             <p>FRONTEND DEVELOPER</p>
-            <p>FOLIO / 2021 - {currentYear}</p>
+            <p>FOLIO / 2021 - {new Date().getFullYear()}</p>
           </div>
           <div>
             <p>AVAILABLE FOR FREELANCE</p>
