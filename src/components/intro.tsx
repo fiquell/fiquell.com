@@ -33,7 +33,7 @@ const Intro = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-5 md:-mt-5 md:flex-row md:items-center lg:-mt-10 lg:gap-10">
+      <div className="flex flex-col gap-5 md:-mt-10 md:flex-row md:items-center lg:gap-10">
         <div
           className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[22rem] ${bebasneue.className}`}>
           <div className="flex flex-wrap">
@@ -44,18 +44,20 @@ const Intro = () => {
                 {text}
               </p>
             ))}
+            <Stripline className="hidden h-1.5 rotate-3 md:block lg:hidden" />
           </div>
         </div>
-        <div className="md:w-1/4 md:text-xs lg:mb-10 lg:text-base">
-          <div className="mb-20 flex justify-end md:mb-5 lg:mb-20">
+        <div className="md:mt-8 md:w-1/4 md:text-xs lg:mb-16 lg:text-base">
+          <div className="mb-10 flex justify-end">
             <p className="w-3/4 md:w-full">
               <span className="text-sm font-medium text-accent md:text-[10px] md:leading-normal lg:text-sm">
                 ABOUT &nbsp;
               </span>
-              I am a developer based in Indonesia specializing in crafting
-              interactive digital experiences on the web. I collaborate with
-              renowned brands and industry leaders to create engaging online
-              experiences.
+              I specialize in creating engaging and captivating digital
+              experiences on the internet. My unique combination of creativity
+              and technical skills allows me to craft interactive and
+              captivating websites that engage and delight users, taking them on
+              an exciting online journey.
             </p>
           </div>
           <div className="flex items-center justify-between text-accent">
