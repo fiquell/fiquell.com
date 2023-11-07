@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Stripline from "~/components/ui/stripline";
 import { bebasneue } from "~/constants/fonts";
 import { developer, end, front } from "~/constants/intro";
+import anima from "~/utils/anima";
 
 const Intro = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -13,22 +14,9 @@ const Intro = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const animateElement = (
-        element: HTMLDivElement | null,
-        delay: number | string,
-      ) => {
-        gsap.from(element, {
-          delay,
-          duration: 0.5,
-          ease: "power4.out",
-          opacity: 0,
-          yPercent: 100,
-        });
-      };
-
-      animateElement(frontendRef.current, 0.5);
-      animateElement(developerRef.current, 0.7);
-      animateElement(contentRef.current, 0.9);
+      anima(frontendRef.current, 0.5);
+      anima(developerRef.current, 0.7);
+      anima(contentRef.current, 0.9);
     }, sectionRef);
 
     return () => ctx.revert();
