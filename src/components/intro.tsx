@@ -14,9 +14,9 @@ const Intro = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      anima(frontendRef.current, 0.5);
-      anima(developerRef.current, 0.7);
-      anima(contentRef.current, 0.9);
+      anima(frontendRef.current, 0.5, 100);
+      anima(developerRef.current, 0.7, 100);
+      anima(contentRef.current, 0.9, 100);
     }, sectionRef);
 
     return () => ctx.revert();

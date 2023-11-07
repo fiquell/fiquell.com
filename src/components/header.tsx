@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Button from "~/components/ui/button";
+import anima from "~/utils/anima";
 import goto from "~/utils/goto";
 
 const Header = () => {
@@ -10,13 +11,7 @@ const Header = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(headerRef.current, {
-        delay: 0.3,
-        duration: 1,
-        ease: "power4.out",
-        opacity: 0,
-        yPercent: -100,
-      });
+      anima(headerRef.current, 0.3, -100);
     }, headerRef);
 
     return () => ctx.revert();
