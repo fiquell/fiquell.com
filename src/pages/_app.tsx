@@ -33,7 +33,7 @@ const App: AppType = ({ Component, pageProps }) => {
   }, []);
 
   return (
-    <div className={opensaucesans.className}>
+    <div className={`bg-background text-text ${opensaucesans.className}`}>
       <Component {...pageProps} />
     </div>
   );

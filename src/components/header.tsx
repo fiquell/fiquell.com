@@ -21,7 +21,7 @@ const Header = () => {
     <header
       ref={headerRef}
       id="header"
-      className="container mt-5 flex justify-between md:items-center">
+      className="container flex justify-between pt-5 md:items-center">
       <div className="h-fit w-fit">
         <Link href="/">
           <Image src="/logo.png" alt="Logo" width={55} height={55} />
