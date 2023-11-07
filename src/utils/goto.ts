@@ -10,11 +10,11 @@ const goto = (
   const id = typeof options === "string" ? options : options.id;
 
   gsap.to(window, {
-    duration: 2,
+    duration: 1,
     scrollTo: {
-      y: `#${id}`,
-      offsetY: 50,
       autoKill: true,
+      offsetY: 50,
+      y: `#${id}`,
     },
   });
 };
