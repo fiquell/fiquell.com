@@ -12,7 +12,7 @@ const Header = () => {
     const ctx = gsap.context(() => {
       gsap.from(headerRef.current, {
         delay: 0.3,
-        duration: 0.5,
+        duration: 1,
         ease: "power4.out",
         opacity: 0,
         yPercent: -100,
