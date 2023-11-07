@@ -1,7 +1,7 @@
 {
   "name": "fiquell.com",
   "version": "0.1.0",
-  "description": "Fiquell's distinctive portfolio",
+  "description": "Crafting captivating websites for exciting online journeys",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
