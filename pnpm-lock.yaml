@@ -26,6 +26,9 @@ dependencies:
   sharp:
     specifier: ^0.32.6
     version: 0.32.6
+  tailwind-scrollbar-hide:
+    specifier: ^1.1.7
+    version: 1.1.7
   zod:
     specifier: ^3.22.4
     version: 3.22.4
@@ -3875,6 +3878,13 @@ packages:
       }
     engines: { node: ">= 0.4" }
     dev: true
+
+  /tailwind-scrollbar-hide@1.1.7:
+    resolution:
+      {
+        integrity: sha512-X324n9OtpTmOMqEgDUEA/RgLrNfBF/jwJdctaPZDzB3mppxJk7TLIDmOreEDm1Bq4R9LSPu4Epf8VSdovNU+iA==,
+      }
+    dev: false
 
   /tailwindcss@3.3.4:
     resolution:
