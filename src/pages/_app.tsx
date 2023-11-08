@@ -1,7 +1,7 @@
 import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { type AppType } from "next/dist/shared/lib/utils";
+import type { AppType } from "next/dist/shared/lib/utils";
 import { useEffect } from "react";
 import { opensaucesans } from "~/constants/fonts";
 import "~/styles/globals.css";
