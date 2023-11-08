@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-background text-text antialiased;
+  }
+
+  .lenis {
+    @apply h-auto;
+  }
+
+  .lenis.lenis-smooth {
+    @apply scroll-auto;
+  }
+}
