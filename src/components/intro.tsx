@@ -30,9 +30,9 @@ const Intro = () => {
           ref={frontendRef}
           className="flex flex-col md:flex-row md:items-center md:gap-2 lg:gap-16">
           <div className="flex">
-            {front.map(({ id, text }) => (
+            {front.map(({ text }, index) => (
               <p
-                key={id}
+                key={index}
                 className="transition duration-300 ease-in-out hover:text-text">
                 {text}
               </p>
@@ -42,9 +42,9 @@ const Intro = () => {
           <div className="flex items-center gap-4">
             <Stripline className="block md:hidden" />
             <div className="mr-2.5 flex lg:mr-5">
-              {end.map(({ id, text }) => (
+              {end.map(({ text }, index) => (
                 <p
-                  key={id}
+                  key={index}
                   className="transition duration-300 ease-in-out hover:text-text">
                   {text}
                 </p>
@@ -57,9 +57,9 @@ const Intro = () => {
         <div
           className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[22rem] ${bebasneue.className}`}>
           <div ref={developerRef} className="flex flex-wrap">
-            {developer.map(({ id, text }) => (
+            {developer.map(({ text }, index) => (
               <p
-                key={id}
+                key={index}
                 className="transition duration-300 ease-in-out hover:text-text">
                 {text}
               </p>
