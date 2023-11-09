@@ -54,7 +54,7 @@ const Contact = () => {
       </div>
       <Link
         href="mailto:fiquellh@gmail.com"
-        className="block text-center text-lg md:text-base lg:text-lg">
+        className="block text-center text-lg lg:text-2xl">
         fiquellh@gmail.com
       </Link>
     </section>
