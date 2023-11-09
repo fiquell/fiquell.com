@@ -15,18 +15,12 @@ const Contact = () => {
       const marqueeClone = marqueeElement!.cloneNode(true);
       marqueeElement!.append(marqueeClone);
 
-      gsap.fromTo(
-        marqueeElement,
-        {
-          x: -200,
-        },
-        {
-          duration: 60,
-          ease: "none",
-          repeat: -1,
-          x: -marqueeWidth - 200,
-        },
-      );
+      gsap.to(marqueeElement, {
+        duration: 60,
+        ease: "none",
+        repeat: -1,
+        x: -marqueeWidth,
+      });
     }, sectionRef);
 
     return () => ctx.revert();
