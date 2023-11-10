@@ -9,10 +9,10 @@
 
   .lenis {
     @apply h-auto;
-  }
 
-  .lenis.lenis-smooth {
-    @apply scroll-auto;
+    &.lenis-smooth {
+      @apply scroll-auto;
+    }
   }
 }
 
