@@ -21,7 +21,7 @@
     @apply transition-slide-up relative rounded-full border-2 border-text text-sm font-medium text-text md:text-xs lg:text-sm;
 
     .c-button__inner {
-      @apply transition-slide-up flex flex-col items-center justify-center px-4 py-2 transform-style-3d;
+      @apply transition-slide-up flex flex-col items-center justify-center px-5 py-2.5 transform-style-3d;
 
       .c-button__inner--content {
         @apply transition-slide-up;

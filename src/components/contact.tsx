@@ -35,7 +35,7 @@ const Contact = () => {
     <section
       ref={sectionRef}
       id="contact"
-      className="mt-20 space-y-10 lg:space-y-20">
+      className="my-20 space-y-10 lg:my-40 lg:space-y-20">
       <div className="container">
         <p className="md:mx-auto md:w-1/2 md:text-center md:text-xs lg:text-base">
           If you have any questions, interesting proposals or projects, or if
@@ -47,8 +47,8 @@ const Contact = () => {
       <div className="overflow-hidden">
         <div ref={lineUpRef} className="mx-auto h-0.5 w-11/12 bg-accent" />
         <div
-          className={`py-8 text-8xl leading-none tracking-tighter text-accent lg:text-[11rem] ${bebasneue.className}`}>
-          <div className="transition duration-700 ease-in-out hover:text-primary">
+          className={`my-8 text-9xl leading-none tracking-tighter text-accent lg:text-[13rem] ${bebasneue.className}`}>
+          <div className="transition duration-1000 ease-in-out hover:text-primary">
             <div
               ref={marqueeRef}
               onMouseEnter={() => marqueeTween!.pause()}

@@ -23,7 +23,7 @@ const Intro = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="container mt-10">
+    <section ref={sectionRef} className="container my-10 lg:my-20">
       <div
         className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[22rem] ${bebasneue.className}`}>
         <div
