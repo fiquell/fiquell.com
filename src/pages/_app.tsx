@@ -1,13 +1,14 @@
 import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { AppType } from "next/dist/shared/lib/utils";
 import { useEffect } from "react";
 import { opensaucesans } from "~/constants/fonts";
 import "~/styles/globals.css";
 
 const App: AppType = ({ Component, pageProps }) => {
-  gsap.registerPlugin(ScrollToPlugin);
+  gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
   useEffect(() => {
     const lenis = new Lenis({

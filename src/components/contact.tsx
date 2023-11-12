@@ -1,26 +1,31 @@
 import { gsap } from "gsap";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { bebasneue } from "~/constants/fonts";
+import streak from "~/utils/streak";
 
 const Contact = () => {
+  const [marqueeTween, setMarqueeTween] = useState<gsap.core.Tween>();
   const sectionRef = useRef<HTMLElement | null>(null);
   const marqueeRef = useRef<HTMLDivElement | null>(null);
+  const lineUpRef = useRef<HTMLDivElement | null>(null);
+  const lineDownRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const marqueeElement = marqueeRef.current;
-      const marqueeWidth = marqueeElement!.scrollWidth;
+      marqueeRef.current!.append(marqueeRef.current!.cloneNode(true));
 
-      const marqueeClone = marqueeElement!.cloneNode(true);
-      marqueeElement!.append(marqueeClone);
-
-      gsap.to(marqueeElement, {
-        duration: 60,
+      const tween = gsap.to(marqueeRef.current, {
+        duration: 100,
         ease: "none",
         repeat: -1,
-        x: -marqueeWidth,
+        x: -marqueeRef.current!.scrollWidth,
       });
+
+      setMarqueeTween(tween);
+
+      streak(lineUpRef.current, sectionRef.current, -100);
+      streak(lineDownRef.current, sectionRef.current, 100);
     }, sectionRef);
 
     return () => ctx.revert();
@@ -40,23 +45,27 @@ const Contact = () => {
         </p>
       </div>
       <div className="overflow-hidden">
-        <div className="mx-auto h-0.5 w-11/12 bg-accent" />
+        <div ref={lineUpRef} className="mx-auto h-0.5 w-11/12 bg-accent" />
         <div
-          className={`py-4 text-8xl leading-none tracking-tighter text-accent lg:text-[11rem] ${bebasneue.className}`}>
-          <div ref={marqueeRef} className="flex items-center gap-3">
-            <p className="whitespace-nowrap">
-              LET&rsquo;S TALK &mdash; LET&rsquo;S COLLABORATE &mdash; SAY HELLO
-              &mdash; WANNA BE STARTING SOMETHING?
-            </p>
+          className={`py-8 text-8xl leading-none tracking-tighter text-accent lg:text-[11rem] ${bebasneue.className}`}>
+          <div className="transition duration-700 ease-in-out hover:text-primary">
+            <div
+              ref={marqueeRef}
+              onMouseEnter={() => marqueeTween!.pause()}
+              onMouseLeave={() => marqueeTween!.play()}
+              className="flex items-center gap-3">
+              <Link
+                href="mailto:fiquellh@gmail.com"
+                className="whitespace-nowrap">
+                LET&rsquo;S TALK &mdash; LET&rsquo;S COLLABORATE &mdash; SAY
+                HELLO &mdash; WANNA BE STARTING SOMETHING?
+              </Link>
+            </div>
           </div>
         </div>
-        <div className="mx-auto h-0.5 w-11/12 bg-accent" />
+        <div ref={lineDownRef} className="mx-auto h-0.5 w-11/12 bg-accent" />
       </div>
-      <Link
-        href="mailto:fiquellh@gmail.com"
-        className="block text-center text-lg lg:text-2xl">
-        fiquellh@gmail.com
-      </Link>
+      <p className="text-center text-lg lg:text-2xl">fiquellh@gmail.com</p>
     </section>
   );
 };
