@@ -1,11 +1,11 @@
 import { gsap } from "gsap";
 
 const anima = (
-  element: HTMLElement | null,
-  delay: number | string,
-  yPercent: number | string,
+  targets: gsap.TweenTarget,
+  delay: gsap.TweenValue,
+  yPercent: gsap.TweenValue,
 ) => {
-  gsap.from(element, {
+  gsap.from(targets, {
     delay,
     duration: 1,
     ease: "power4.out",
