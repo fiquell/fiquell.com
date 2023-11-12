@@ -64,7 +64,6 @@ const Intro = () => {
                 {text}
               </p>
             ))}
-            <Stripline className="!mb-0 hidden !h-1.5 rotate-3 md:block lg:hidden" />
           </div>
         </div>
         <div
