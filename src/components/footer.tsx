@@ -21,11 +21,11 @@ const Footer = () => {
 
   return (
     <footer className="container mt-8 flex items-center justify-between py-8">
-      <div className="flex items-center gap-3 md:text-xs lg:text-base">
+      <div className="flex items-center gap-2 md:text-xs lg:text-base">
         <p>{currentTime}</p>
         <p className="text-accent">LOMBOK, ID</p>
       </div>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2">
         <Link href="https://github.com/fiquell">
           <Button>GITHUB</Button>
         </Link>
