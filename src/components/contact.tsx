@@ -10,22 +10,71 @@ const Contact = () => {
   const marqueeRef = useRef<HTMLDivElement | null>(null);
   const lineUpRef = useRef<HTMLDivElement | null>(null);
   const lineDownRef = useRef<HTMLDivElement | null>(null);
+  const emailRef = useRef<HTMLParagraphElement | null>(null);
+  const copyTextRef = useRef<HTMLParagraphElement | null>(null);
+
+  const copyText = () => {
+    if (emailRef.current) {
+      void navigator.clipboard.writeText(emailRef.current.textContent ?? "");
+
+      if (copyTextRef.current) {
+        copyTextRef.current.textContent = "COPIED";
+
+        setTimeout(() => {
+          if (copyTextRef.current) {
+            copyTextRef.current.textContent = "CLICK TO COPY";
+          }
+        }, 2000);
+      }
+    }
+  };
+
+  const backInCopyText = () => {
+    gsap.fromTo(
+      copyTextRef.current,
+      {
+        opacity: 0,
+        y: 10,
+      },
+      {
+        display: "block",
+        duration: 0.5,
+        ease: "back.inOut(4)",
+        opacity: 1,
+        y: 0,
+      },
+    );
+  };
+
+  const backOutCopyText = () => {
+    gsap.to(copyTextRef.current, {
+      duration: 0.5,
+      ease: "back.inOut(4)",
+      opacity: 0,
+      y: 10,
+    });
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      marqueeRef.current!.append(marqueeRef.current!.cloneNode(true));
+      if (marqueeRef.current) {
+        marqueeRef.current.append(marqueeRef.current.cloneNode(true));
 
-      const tween = gsap.to(marqueeRef.current, {
-        duration: 100,
-        ease: "none",
-        repeat: -1,
-        x: -marqueeRef.current!.scrollWidth,
-      });
-
-      setMarqueeTween(tween);
+        setMarqueeTween(
+          gsap.to(marqueeRef.current, {
+            duration: 100,
+            ease: "none",
+            repeat: -1,
+            x: -marqueeRef.current.scrollWidth,
+          }),
+        );
+      }
 
       streak(lineUpRef.current, sectionRef.current, -100);
       streak(lineDownRef.current, sectionRef.current, 100);
+
+      backInCopyText();
+      backOutCopyText();
     }, sectionRef);
 
     return () => ctx.revert();
@@ -51,8 +100,8 @@ const Contact = () => {
           <div className="transition-slide-up hover:text-primary">
             <div
               ref={marqueeRef}
-              onMouseEnter={() => marqueeTween!.pause()}
-              onMouseLeave={() => marqueeTween!.play()}
+              onMouseEnter={() => marqueeTween?.pause()}
+              onMouseLeave={() => marqueeTween?.play()}
               className="flex items-center gap-3">
               <Link
                 href="mailto:fiquellh@gmail.com"
@@ -65,7 +114,21 @@ const Contact = () => {
         </div>
         <div ref={lineDownRef} className="mx-auto h-0.5 w-11/12 bg-accent" />
       </div>
-      <p className="text-center text-lg lg:text-2xl">fiquellh@gmail.com</p>
+      <div className="relative flex flex-col items-center">
+        <p
+          ref={emailRef}
+          onClick={copyText}
+          onMouseEnter={backInCopyText}
+          onMouseLeave={backOutCopyText}
+          className="transition-slide-up cursor-pointer text-lg hover:text-primary lg:text-2xl">
+          fiquellh@gmail.com
+        </p>
+        <p
+          ref={copyTextRef}
+          className="absolute mt-8 hidden rounded-full border-2 border-text px-5 py-2.5 text-sm font-medium md:text-xs lg:mt-10 lg:text-sm">
+          CLICK TO COPY
+        </p>
+      </div>
     </section>
   );
 };
