@@ -38,7 +38,6 @@ const Contact = () => {
       },
       {
         display: "block",
-        duration: 0.5,
         ease: "back.inOut(4)",
         opacity: 1,
         y: 0,
@@ -48,7 +47,6 @@ const Contact = () => {
 
   const backOutCopyText = () => {
     gsap.to(copyTextRef.current, {
-      duration: 0.5,
       ease: "back.inOut(4)",
       opacity: 0,
       y: 10,

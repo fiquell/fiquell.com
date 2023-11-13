@@ -20,7 +20,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="container mt-8 flex items-center justify-between py-8">
+    <footer className="container flex items-center justify-between py-5">
       <div className="flex items-center gap-2 md:text-xs lg:text-base">
         <p>{currentTime}</p>
         <p className="text-accent">LOMBOK, ID</p>
