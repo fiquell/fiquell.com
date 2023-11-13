@@ -48,7 +48,7 @@ const Contact = () => {
         <div ref={lineUpRef} className="mx-auto h-0.5 w-11/12 bg-accent" />
         <div
           className={`my-8 text-9xl leading-none tracking-tighter text-accent lg:text-[13rem] ${bebasneue.className}`}>
-          <div className="transition duration-1000 ease-in-out hover:text-primary">
+          <div className="transition-slide-up hover:text-primary">
             <div
               ref={marqueeRef}
               onMouseEnter={() => marqueeTween!.pause()}
