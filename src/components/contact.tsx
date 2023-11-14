@@ -60,7 +60,7 @@ const Contact = () => {
 
         setMarqueeTween(
           gsap.to(marqueeRef.current, {
-            duration: 100,
+            duration: (marqueeRef.current.scrollWidth / 100) * 1,
             ease: "none",
             repeat: -1,
             x: -marqueeRef.current.scrollWidth,
