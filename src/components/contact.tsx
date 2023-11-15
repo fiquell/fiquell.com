@@ -29,7 +29,7 @@ const Contact = () => {
     }
   };
 
-  const backInCopyText = () => {
+  const onMouseEnter = () => {
     gsap.fromTo(
       copyTextRef.current,
       {
@@ -38,16 +38,16 @@ const Contact = () => {
       },
       {
         display: "block",
-        ease: "back.inOut(4)",
+        ease: "power2.inOut",
         opacity: 1,
         y: 0,
       },
     );
   };
 
-  const backOutCopyText = () => {
+  const onMouseLeave = () => {
     gsap.to(copyTextRef.current, {
-      ease: "back.inOut(4)",
+      ease: "power2.inOut",
       opacity: 0,
       y: 10,
     });
@@ -71,8 +71,8 @@ const Contact = () => {
       streak(lineUpRef.current, sectionRef.current, -100);
       streak(lineDownRef.current, sectionRef.current, 100);
 
-      backInCopyText();
-      backOutCopyText();
+      onMouseEnter();
+      onMouseLeave();
     }, sectionRef);
 
     return () => ctx.revert();
@@ -116,9 +116,9 @@ const Contact = () => {
         <p
           ref={emailRef}
           onClick={copyText}
-          onMouseEnter={backInCopyText}
-          onMouseLeave={backOutCopyText}
-          className="transition-slide-up cursor-pointer text-lg hover:text-primary lg:text-2xl">
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          className="transition-slide-up cursor-pointer text-lg hover:text-primary hover:scale-110 lg:text-2xl">
           fiquellh@gmail.com
         </p>
         <p
