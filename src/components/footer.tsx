@@ -23,7 +23,7 @@ const Footer = () => {
     <footer className="container flex flex-col items-center gap-5 py-5 md:flex-row md:justify-between">
       <div className="flex items-center gap-5 md:text-xs lg:text-base">
         <p>{currentTime}</p>
-        <p className="text-accent">LOMBOK, ID</p>
+        <p>LOMBOK, ID</p>
       </div>
       <div className="flex items-center gap-2">
         <Link href="https://github.com/fiquell">

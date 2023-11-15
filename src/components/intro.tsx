@@ -65,7 +65,7 @@ const Intro = () => {
           className="md:mt-8 md:w-1/4 md:text-xs lg:mb-16 lg:text-base">
           <div className="mb-10 flex justify-end">
             <p className="w-3/4 md:w-full">
-              <span className="text-sm font-medium text-accent md:text-[10px] md:leading-normal lg:text-sm">
+              <span className="text-sm font-medium md:text-[10px] md:leading-normal lg:text-sm">
                 ABOUT &nbsp;
               </span>
               I specialize in creating engaging and captivating digital
@@ -75,11 +75,11 @@ const Intro = () => {
               an exciting online journey.
             </p>
           </div>
-          <div className="flex items-center justify-between text-accent">
+          <div className="flex items-center justify-between">
             <p>Scroll down</p>
             <Icon
-              icon="majesticons:arrow-down"
-              className="animate-bounce text-2xl md:text-sm lg:text-xl"
+              icon="eva:arrowhead-down-fill"
+              className="animate-bounce text-xl md:text-base lg:text-xl"
             />
           </div>
         </div>
