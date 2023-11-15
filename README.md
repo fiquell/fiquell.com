@@ -6,4 +6,4 @@ If you wish to use my content, please refer to [Attribution-NonCommercial 4.0 In
 
 Copyright &copy; 2023 Fiquell. All rights reserved.
 
-Enjoy your journey through the artistic world of [Fiquell](https://fiquell.com), to delve deeper into the creative world. Your support is inspiring, and I thank you for being here. :rainbow:
+Enjoy your journey through the artistic world of [Fiquell](https://fiquell.com), to delve deeper into the creative world. Your support is inspiring, and I thank you for being here.
