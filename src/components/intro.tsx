@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
-import Stripline from "~/components/ui/stripline";
+import { Stripline } from "~/components/ui";
 import { bebasneue } from "~/constants/fonts";
 import { developer, end, front } from "~/constants/intro";
 import anima from "~/utils/anima";

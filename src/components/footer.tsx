@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Button from "~/components/ui/button";
+import { Button } from "~/components/ui";
 import goto from "~/utils/goto";
 
 const Footer = () => {

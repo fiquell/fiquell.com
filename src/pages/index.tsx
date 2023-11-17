@@ -1,8 +1,5 @@
 import Head from "next/head";
-import Contact from "~/components/contact";
-import Footer from "~/components/footer";
-import Header from "~/components/header";
-import Intro from "~/components/intro";
+import { Contact, Footer, Header, Intro } from "~/components";
 
 const Home = () => {
   return (

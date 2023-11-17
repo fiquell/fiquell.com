@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import Button from "~/components/ui/button";
+import { Button } from "~/components/ui";
 import anima from "~/utils/anima";
 import goto from "~/utils/goto";
 
