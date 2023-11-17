@@ -33,7 +33,7 @@
     }
 
     &:hover {
-      @apply border-primary bg-primary text-background scale-105;
+      @apply scale-105;
 
       .c-button__inner {
         @apply rotate-x-90;
