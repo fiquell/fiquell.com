@@ -98,6 +98,8 @@ const Contact = () => {
           <div className="transition-slide-up hover:text-primary">
             <div
               ref={marqueeRef}
+              data-cursor-size={150}
+              data-cursor-text="SAY HELLO"
               onMouseEnter={() => marqueeTween?.pause()}
               onMouseLeave={() => marqueeTween?.play()}
               className="flex items-center gap-3">

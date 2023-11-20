@@ -70,6 +70,9 @@ devDependencies:
   prettier-plugin-tailwindcss:
     specifier: ^0.5.7
     version: 0.5.7(prettier@3.1.0)
+  react-creative-cursor:
+    specifier: ^1.2.7
+    version: 1.2.7(react@18.2.0)
   tailwind-scrollbar-hide:
     specifier: ^1.1.7
     version: 1.1.7
@@ -1828,6 +1831,13 @@ packages:
     engines: { node: ">=4.0" }
     dev: true
 
+  /estree-walker@0.6.1:
+    resolution:
+      {
+        integrity: sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==,
+      }
+    dev: true
+
   /esutils@2.0.3:
     resolution:
       {
@@ -2183,7 +2193,6 @@ packages:
       {
         integrity: sha512-EkYnpG8qHgYBFAwsgsGEqvT1WUidX0tt/ijepx7z8EUJHElykg91RvW1XbkT59T0gZzzszOpjQv7SE41XuIXyQ==,
       }
-    dev: false
 
   /has-bigints@1.0.2:
     resolution:
@@ -3394,6 +3403,20 @@ packages:
       strip-json-comments: 2.0.1
     dev: false
 
+  /react-creative-cursor@1.2.7(react@18.2.0):
+    resolution:
+      {
+        integrity: sha512-8SbzfH41u9y79Ser11H8B16wP2i3S7JyM8K2xjD/X8w3wqlnRmex1uetguiPySrMZNkTI+oss+5r8zHSVPFR3w==,
+      }
+    engines: { node: ">=10" }
+    peerDependencies:
+      react: ">=16"
+    dependencies:
+      gsap: 3.12.2
+      react: 18.2.0
+      rollup-plugin-scss: 3.0.0
+    dev: true
+
   /react-dom@18.2.0(react@18.2.0):
     resolution:
       {
@@ -3543,6 +3566,24 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+    dev: true
+
+  /rollup-plugin-scss@3.0.0:
+    resolution:
+      {
+        integrity: sha512-UldNaNHEon2a5IusHvj/Nnwc7q13YDvbFxz5pfNbHBNStxGoUNyM+0XwAA/UafJ1u8XRPGdBMrhWFthrrGZdWQ==,
+      }
+    dependencies:
+      rollup-pluginutils: 2.8.2
+    dev: true
+
+  /rollup-pluginutils@2.8.2:
+    resolution:
+      {
+        integrity: sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==,
+      }
+    dependencies:
+      estree-walker: 0.6.1
     dev: true
 
   /run-parallel@1.2.0:

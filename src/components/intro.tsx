@@ -29,9 +29,12 @@ const Intro = () => {
         <div
           ref={frontendRef}
           className="flex flex-col md:flex-row md:items-center md:gap-2 lg:gap-16">
-          <div className="flex">
+          <div data-cursor-size={150} className="flex">
             {front.map(({ text }, index) => (
-              <p key={index} className="transition-slide-up hover:text-text">
+              <p
+                key={index}
+                data-cursor-text="FRONT"
+                className="transition-slide-up hover:text-text">
                 {text}
               </p>
             ))}
@@ -39,9 +42,12 @@ const Intro = () => {
           <Stripline className="hidden md:block" />
           <div className="flex items-center gap-4">
             <Stripline className="block md:hidden" />
-            <div className="mr-2.5 flex lg:mr-5">
+            <div data-cursor-size={150} className="mr-2.5 flex lg:mr-5">
               {end.map(({ text }, index) => (
-                <p key={index} className="transition-slide-up hover:text-text">
+                <p
+                  key={index}
+                  data-cursor-text="END"
+                  className="transition-slide-up hover:text-text">
                   {text}
                 </p>
               ))}
@@ -52,9 +58,15 @@ const Intro = () => {
       <div className="flex flex-col gap-5 md:-mt-10 md:flex-row md:items-center lg:gap-10">
         <div
           className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[22rem] ${bebasneue.className}`}>
-          <div ref={developerRef} className="flex flex-wrap">
+          <div
+            ref={developerRef}
+            data-cursor-size={150}
+            className="flex flex-wrap">
             {developer.map(({ text }, index) => (
-              <p key={index} className="transition-slide-up hover:text-text">
+              <p
+                key={index}
+                data-cursor-text="DEVELOPER"
+                className="transition-slide-up hover:text-text">
                 {text}
               </p>
             ))}
