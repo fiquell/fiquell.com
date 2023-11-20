@@ -8,7 +8,7 @@ const anima = (
   gsap.from(targets, {
     delay,
     duration: 1,
-    ease: "power4.out",
+    ease: "expo.out",
     opacity: 0,
     yPercent,
   });

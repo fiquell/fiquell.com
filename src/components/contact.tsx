@@ -6,6 +6,7 @@ import streak from "~/utils/streak";
 
 const Contact = () => {
   const [marqueeTween, setMarqueeTween] = useState<gsap.core.Tween>();
+
   const sectionRef = useRef<HTMLElement | null>(null);
   const marqueeRef = useRef<HTMLDivElement | null>(null);
   const lineUpRef = useRef<HTMLDivElement | null>(null);
@@ -38,7 +39,7 @@ const Contact = () => {
       },
       {
         display: "block",
-        ease: "power2.inOut",
+        ease: "expo.inOut",
         opacity: 1,
         y: 0,
       },
@@ -47,7 +48,7 @@ const Contact = () => {
 
   const onMouseLeave = () => {
     gsap.to(copyTextRef.current, {
-      ease: "power2.inOut",
+      ease: "expo.inOut",
       opacity: 0,
       y: 10,
     });

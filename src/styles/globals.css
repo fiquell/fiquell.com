@@ -62,6 +62,6 @@
   }
 
   .transition-slide-up {
-    transition: all 0.5s cubic-bezier(0.75, 0, 0.25, 1);
+    transition: all 0.5s cubic-bezier(0, 1, 1, 1);
   }
 }
