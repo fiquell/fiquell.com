@@ -3,6 +3,11 @@ import type { Config } from "tailwindcss";
 export default {
   content: ["./src/**/*.tsx"],
   theme: {
+    screens: {
+      sm: "576px",
+      md: "768px",
+      lg: "1476px",
+    },
     container: {
       center: true,
       padding: {
