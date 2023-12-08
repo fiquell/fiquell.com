@@ -34,6 +34,9 @@ devDependencies:
   "@iconify/react":
     specifier: ^4.1.1
     version: 4.1.1(react@18.2.0)
+  "@next/eslint-plugin-next":
+    specifier: ^14.0.4
+    version: 14.0.4
   "@types/eslint":
     specifier: ^8.44.7
     version: 8.44.7
@@ -266,6 +269,15 @@ packages:
     resolution:
       {
         integrity: sha512-ng7pU/DDsxPgT6ZPvuprxrkeew3XaRf4LAT4FabaEO/hAbvVx4P7wqnqdbTdDn1kgTvsI4tpIgT4Awn/m0bGbg==,
+      }
+    dependencies:
+      glob: 7.1.7
+    dev: true
+
+  /@next/eslint-plugin-next@14.0.4:
+    resolution:
+      {
+        integrity: sha512-U3qMNHmEZoVmHA0j/57nRfi3AscXNvkOnxDmle/69Jz/G0o/gWjXTDdlgILZdrxQ0Lw/jv2mPW8PGy0EGIHXhQ==,
       }
     dependencies:
       glob: 7.1.7
