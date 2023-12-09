@@ -4,13 +4,13 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { AppType } from "next/dist/shared/lib/utils";
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Cursor } from "react-creative-cursor";
 import "react-creative-cursor/dist/styles.css";
 import { Footer, Header } from "~/components";
 import { opensaucesans } from "~/constants/fonts";
 import { metadata, title } from "~/constants/metadata";
-import useIsomorphic from "~/hooks/use-isomorphic";
+import { useIsomorphic } from "~/hooks";
 import "~/styles/globals.css";
 
 const App: AppType = ({ Component, pageProps }) => {
@@ -19,10 +19,6 @@ const App: AppType = ({ Component, pageProps }) => {
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
   useIsomorphic(() => {
-    setIsCursor(true);
-  }, []);
-
-  useEffect(() => {
     const lenis = new Lenis({
       duration: 1.5,
       lerp: 0.5,
@@ -41,6 +37,7 @@ const App: AppType = ({ Component, pageProps }) => {
     };
 
     requestAnimationFrame(raf);
+    setIsCursor(true);
 
     return () => lenis.destroy();
   }, []);

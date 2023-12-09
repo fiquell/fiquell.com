@@ -1,15 +1,16 @@
 import { gsap } from "gsap";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Button } from "~/components/ui";
+import { useIsomorphic } from "~/hooks";
 import anima from "~/utils/anima";
 import goto from "~/utils/goto";
 
 const Header = () => {
   const headerRef = useRef<HTMLElement | null>(null);
 
-  useEffect(() => {
+  useIsomorphic(() => {
     const ctx = gsap.context(() => {
       anima(headerRef.current, 0.3, -100);
     }, headerRef);
