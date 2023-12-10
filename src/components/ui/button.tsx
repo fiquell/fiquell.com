@@ -1,6 +1,4 @@
-import type { ButtonHTMLAttributes, FC } from "react";
-
-const Button: FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
+const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
   children,
   className,
   ...props

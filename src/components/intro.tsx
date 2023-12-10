@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { gsap } from "gsap";
 import { useRef } from "react";
-import { Stripline } from "~/components/ui";
+import { Stripes } from "~/components/ui";
 import { bebasneue, developer, end, front } from "~/constants";
 import { useIsomorphic } from "~/hooks";
 import { fadeOut } from "~/utils";
@@ -39,9 +39,9 @@ const Intro = () => {
               </p>
             ))}
           </div>
-          <Stripline className="hidden md:block" />
+          <Stripes className="hidden md:block" />
           <div className="flex items-center gap-4">
-            <Stripline className="block md:hidden" />
+            <Stripes className="block md:hidden" />
             <div data-cursor-size={150} className="mr-2.5 flex lg:mr-5">
               {end.map(({ text }, index) => (
                 <p

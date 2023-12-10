@@ -1,4 +1,4 @@
 import Button from "./button";
-import Stripline from "./stripline";
+import Stripes from "./stripes";
 
-export { Button, Stripline };
+export { Button, Stripes };

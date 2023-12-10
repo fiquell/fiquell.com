@@ -1,6 +1,4 @@
-import type { FC, HTMLAttributes } from "react";
-
-const Stripline: FC<HTMLAttributes<HTMLSpanElement>> = ({
+const Stripes: React.FC<React.HTMLAttributes<HTMLSpanElement>> = ({
   className,
   ...props
 }) => {
@@ -16,4 +14,4 @@ const Stripline: FC<HTMLAttributes<HTMLSpanElement>> = ({
   );
 };
 
-export default Stripline;
+export default Stripes;
