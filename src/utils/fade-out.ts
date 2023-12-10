@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 
-const anima = (
+export const fadeOut = (
   targets: gsap.TweenTarget,
   delay: gsap.TweenValue,
   yPercent: gsap.TweenValue,
@@ -13,5 +13,3 @@ const anima = (
     yPercent,
   });
 };
-
-export default anima;

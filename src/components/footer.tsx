@@ -1,11 +1,13 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "~/components/ui";
-import goto from "~/utils/goto";
+import { useIsomorphic } from "~/hooks";
+import { scrollTo } from "~/utils";
 
 const Footer = () => {
   const [currentTime, setCurrentTime] = useState("");
 
+  const scrollToHeader = () => scrollTo("#header");
   const updateTime = () => {
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, "0");
@@ -13,7 +15,7 @@ const Footer = () => {
     setCurrentTime(`${hours}:${minutes}`);
   };
 
-  useEffect(() => {
+  useIsomorphic(() => {
     updateTime();
     const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
@@ -26,10 +28,13 @@ const Footer = () => {
         <p>LOMBOK, ID</p>
       </div>
       <div className="flex items-center gap-2">
+        <Link href="https://twitter.com/_fiquell">
+          <Button>TWITTER</Button>
+        </Link>
         <Link href="https://github.com/fiquell">
           <Button>GITHUB</Button>
         </Link>
-        <Button onClick={() => goto("header")}>TOP</Button>
+        <Button onClick={scrollToHeader}>TOP</Button>
       </div>
     </footer>
   );

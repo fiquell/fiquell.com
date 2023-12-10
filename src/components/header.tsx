@@ -4,15 +4,17 @@ import Link from "next/link";
 import { useRef } from "react";
 import { Button } from "~/components/ui";
 import { useIsomorphic } from "~/hooks";
-import anima from "~/utils/anima";
-import goto from "~/utils/goto";
+import { fadeOut, scrollTo } from "~/utils";
 
 const Header = () => {
-  const headerRef = useRef<HTMLElement | null>(null);
+  const headerRef = useRef(null);
+
+  const currentYear = new Date().getFullYear();
+  const scrollToContact = () => scrollTo("#contact");
 
   useIsomorphic(() => {
     const ctx = gsap.context(() => {
-      anima(headerRef.current, 0.3, -100);
+      fadeOut(headerRef.current, 0.3, -100);
     }, headerRef);
 
     return () => ctx.revert();
@@ -25,20 +27,20 @@ const Header = () => {
       className="container flex justify-between py-5 md:items-center">
       <div className="h-fit w-fit">
         <Link href="/">
-          <Image src="/logo.png" alt="Logo" width={50} height={50} />
+          <Image src="/logo.png" alt="Logo" width={55} height={55} />
         </Link>
       </div>
       <div className="text-xs font-medium md:text-[10px] lg:text-xs">
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:gap-10 lg:gap-16">
           <div className="md:w-48 lg:w-[44rem]">
             <p>FRONTEND DEVELOPER</p>
-            <p>FOLIO / 2021 - {new Date().getFullYear()}</p>
+            <p>FOLIO / 2021 - {currentYear}</p>
           </div>
           <div>
             <p>AVAILABLE FOR FREELANCE</p>
             <p>WORK FROM OCTOBER 2023</p>
           </div>
-          <Button onClick={() => goto("contact")} className="w-fit">
+          <Button onClick={scrollToContact} className="w-fit">
             SAY HELLO
           </Button>
         </div>

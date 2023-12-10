@@ -1,22 +1,23 @@
 import { Icon } from "@iconify/react";
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Stripline } from "~/components/ui";
 import { bebasneue } from "~/constants/fonts";
 import { developer, end, front } from "~/constants/intro";
-import anima from "~/utils/anima";
+import { useIsomorphic } from "~/hooks";
+import { fadeOut } from "~/utils";
 
 const Intro = () => {
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const frontendRef = useRef<HTMLDivElement | null>(null);
-  const developerRef = useRef<HTMLDivElement | null>(null);
-  const contentRef = useRef<HTMLDivElement | null>(null);
+  const sectionRef = useRef(null);
+  const frontendRef = useRef(null);
+  const developerRef = useRef(null);
+  const aboutRef = useRef(null);
 
-  useEffect(() => {
+  useIsomorphic(() => {
     const ctx = gsap.context(() => {
-      anima(frontendRef.current, 0.5, 100);
-      anima(developerRef.current, 0.7, 100);
-      anima(contentRef.current, 0.9, 100);
+      fadeOut(frontendRef.current, 0.5, 100);
+      fadeOut(developerRef.current, 0.7, 100);
+      fadeOut(aboutRef.current, 0.9, 100);
     }, sectionRef);
 
     return () => ctx.revert();
@@ -73,7 +74,7 @@ const Intro = () => {
           </div>
         </div>
         <div
-          ref={contentRef}
+          ref={aboutRef}
           className="md:mt-8 md:w-1/4 md:text-xs lg:mb-16 lg:text-base">
           <div className="mb-10 flex justify-end">
             <p className="w-3/4 md:w-full">

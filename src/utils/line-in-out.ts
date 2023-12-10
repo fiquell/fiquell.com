@@ -1,20 +1,18 @@
 import { gsap } from "gsap";
 
-const streak = (
+export const lineInOut = (
   targets: gsap.TweenTarget,
-  trigger: gsap.DOMTarget,
   xPercent: gsap.TweenValue,
+  trigger: gsap.DOMTarget,
 ) => {
   gsap.from(targets, {
     opacity: 0,
     xPercent,
     scrollTrigger: {
-      trigger,
-      start: "top 80%",
       end: "bottom 80%",
       scrub: 1,
+      start: "top 80%",
+      trigger,
     },
   });
 };
-
-export default streak;

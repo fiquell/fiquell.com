@@ -1,8 +1,9 @@
 import { gsap } from "gsap";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { bebasneue } from "~/constants/fonts";
-import streak from "~/utils/streak";
+import { useIsomorphic } from "~/hooks";
+import { lineInOut } from "~/utils";
 
 const Contact = () => {
   const [marqueeTween, setMarqueeTween] = useState<gsap.core.Tween>();
@@ -54,7 +55,7 @@ const Contact = () => {
     });
   };
 
-  useEffect(() => {
+  useIsomorphic(() => {
     const ctx = gsap.context(() => {
       if (marqueeRef.current) {
         marqueeRef.current.append(marqueeRef.current.cloneNode(true));
@@ -69,11 +70,8 @@ const Contact = () => {
         );
       }
 
-      streak(lineUpRef.current, sectionRef.current, -100);
-      streak(lineDownRef.current, sectionRef.current, 100);
-
-      onMouseEnter();
-      onMouseLeave();
+      lineInOut(lineUpRef.current, -100, sectionRef.current);
+      lineInOut(lineDownRef.current, 100, sectionRef.current);
     }, sectionRef);
 
     return () => ctx.revert();
