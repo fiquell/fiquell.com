@@ -8,8 +8,7 @@ import { useState } from "react";
 import { Cursor } from "react-creative-cursor";
 import "react-creative-cursor/dist/styles.css";
 import { Footer, Header } from "~/components";
-import { opensaucesans } from "~/constants/fonts";
-import { metadata, title } from "~/constants/metadata";
+import { metadata, opensaucesans, title } from "~/constants";
 import { useIsomorphic } from "~/hooks";
 import "~/styles/globals.css";
 

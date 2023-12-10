@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { bebasneue } from "~/constants/fonts";
+import { bebasneue } from "~/constants";
 import { useIsomorphic } from "~/hooks";
 import { lineInOut } from "~/utils";
 

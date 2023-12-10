@@ -2,8 +2,7 @@ import { Icon } from "@iconify/react";
 import { gsap } from "gsap";
 import { useRef } from "react";
 import { Stripline } from "~/components/ui";
-import { bebasneue } from "~/constants/fonts";
-import { developer, end, front } from "~/constants/intro";
+import { bebasneue, developer, end, front } from "~/constants";
 import { useIsomorphic } from "~/hooks";
 import { fadeOut } from "~/utils";
 
