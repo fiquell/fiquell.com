@@ -45,8 +45,8 @@ const App: AppType = ({ Component, pageProps }) => {
     <>
       <Head>
         <title>{title}</title>
-        {metadata.map((meta) => (
-          <meta key={meta.name ?? meta.property} {...meta} />
+        {metadata.map((meta, index) => (
+          <meta key={index} {...meta} />
         ))}
       </Head>
       <div className={opensaucesans.className}>
@@ -55,10 +55,10 @@ const App: AppType = ({ Component, pageProps }) => {
         <Footer />
         {isCursor && (
           <Cursor
-            isGelly={true}
-            cursorSize={0}
             cursorBackgrounColor="#111111"
             cursorInnerColor="#f0cca8"
+            cursorSize={0}
+            isGelly={true}
           />
         )}
       </div>

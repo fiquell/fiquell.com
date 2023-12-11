@@ -7,7 +7,7 @@ import { useIsomorphic } from "~/hooks";
 import { fadeOut, scrollTo } from "~/utils";
 
 const Header = () => {
-  const headerRef = useRef(null);
+  const headerRef = useRef<HTMLElement | null>(null);
 
   const currentYear = new Date().getFullYear();
   const scrollToContact = () => scrollTo("#contact");

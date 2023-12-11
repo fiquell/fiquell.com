@@ -7,10 +7,10 @@ import { useIsomorphic } from "~/hooks";
 import { fadeOut } from "~/utils";
 
 const Intro = () => {
-  const sectionRef = useRef(null);
-  const frontendRef = useRef(null);
-  const developerRef = useRef(null);
-  const aboutRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const frontendRef = useRef<HTMLDivElement | null>(null);
+  const developerRef = useRef<HTMLDivElement | null>(null);
+  const aboutRef = useRef<HTMLDivElement | null>(null);
 
   useIsomorphic(() => {
     const ctx = gsap.context(() => {

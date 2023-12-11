@@ -9,8 +9,8 @@ const Contact = () => {
   const [marqueeTween, setMarqueeTween] = useState<gsap.core.Tween>();
 
   const sectionRef = useRef<HTMLElement | null>(null);
-  const marqueeRef = useRef<HTMLDivElement | null>(null);
   const lineUpRef = useRef<HTMLDivElement | null>(null);
+  const marqueeRef = useRef<HTMLDivElement | null>(null);
   const lineDownRef = useRef<HTMLDivElement | null>(null);
   const emailRef = useRef<HTMLParagraphElement | null>(null);
   const copyTextRef = useRef<HTMLParagraphElement | null>(null);
