@@ -91,7 +91,10 @@ const Contact = () => {
         </p>
       </div>
       <div className="overflow-hidden">
-        <div ref={lineUpRef} className="mx-auto h-0.5 w-11/12 bg-accent" />
+        <div
+          ref={lineUpRef}
+          className="mx-auto h-0.5 w-11/12 rounded-full bg-accent"
+        />
         <div
           className={`my-8 text-9xl leading-none tracking-tighter text-accent lg:text-[13rem] ${bebasneue.className}`}>
           <div className="transition-slide-up hover:text-primary">
@@ -111,7 +114,10 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div ref={lineDownRef} className="mx-auto h-0.5 w-11/12 bg-accent" />
+        <div
+          ref={lineDownRef}
+          className="mx-auto h-0.5 w-11/12 rounded-full bg-accent"
+        />
       </div>
       <div className="relative flex flex-col items-center">
         <p
