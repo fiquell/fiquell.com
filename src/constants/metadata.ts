@@ -16,6 +16,7 @@ export const metadata = [
   { name: "description", content: description[0] },
   { name: "author", content: "Fiquell" },
   { name: "keywords", content: keywords.join(", ") },
+  { name: "theme-color", content: "#111111" },
   { name: "viewport", content: "width=device-width, initial-scale=1.0" },
   { property: "og:title", content: title },
   { property: "og:description", content: description[0] },
