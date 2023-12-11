@@ -28,3 +28,9 @@ export const metadata = [
   { property: "og:image:width", content: "512" },
   { property: "og:image:height", content: "512" },
 ];
+
+export const linkdata = [
+  { rel: "icon", href: "/favicon.ico" },
+  { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+  { rel: "manifest", href: "/manifest.json" },
+];

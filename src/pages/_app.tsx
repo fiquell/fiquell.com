@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Cursor } from "react-creative-cursor";
 import "react-creative-cursor/dist/styles.css";
 import { Footer, Header } from "~/components";
-import { metadata, opensaucesans, title } from "~/constants";
+import { linkdata, metadata, opensaucesans, title } from "~/constants";
 import { useIsomorphic } from "~/hooks";
 import "~/styles/globals.css";
 
@@ -47,6 +47,9 @@ const App: AppType = ({ Component, pageProps }) => {
         <title>{title}</title>
         {metadata.map((meta, index) => (
           <meta key={index} {...meta} />
+        ))}
+        {linkdata.map((link, index) => (
+          <link key={index} {...link} />
         ))}
       </Head>
       <div className={opensaucesans.className}>

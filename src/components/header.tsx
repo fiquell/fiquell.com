@@ -27,7 +27,12 @@ const Header = () => {
       className="container flex justify-between py-5 md:items-center">
       <div className="h-fit w-fit">
         <Link href="/">
-          <Image src="/logo.png" alt="Logo" width={55} height={55} />
+          <Image
+            src="/fiquell-512x512.png"
+            alt="Fiquell Logo"
+            width={55}
+            height={55}
+          />
         </Link>
       </div>
       <div className="text-xs font-medium md:text-[10px] lg:text-xs">
