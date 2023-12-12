@@ -22,11 +22,13 @@ export const metadata = [
   { property: "og:description", content: description[0] },
   { property: "og:type", content: "website" },
   { property: "og:url", content: "https://fiquell.com/" },
-  { property: "og:image", content: "https://fiquell.com/logo.png" },
-  { property: "og:image:alt", content: "Logo" },
+  {
+    property: "og:image",
+    content: "https://fiquell.com/fiquell-social-share.png",
+  },
   { property: "og:image:type", content: "image/png" },
-  { property: "og:image:width", content: "512" },
-  { property: "og:image:height", content: "512" },
+  { property: "og:image:width", content: "1920" },
+  { property: "og:image:height", content: "1080" },
 ];
 
 export const linkdata = [
