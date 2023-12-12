@@ -45,11 +45,11 @@ const App: AppType = ({ Component, pageProps }) => {
     <>
       <Head>
         <title>{title}</title>
-        {metadata.map((meta, index) => (
-          <meta key={index} {...meta} />
+        {metadata.map((meta) => (
+          <meta key={meta.name ?? meta.property} {...meta} />
         ))}
-        {linkdata.map((link, index) => (
-          <link key={index} {...link} />
+        {linkdata.map((link) => (
+          <link key={link.rel} {...link} />
         ))}
       </Head>
       <div className={opensaucesans.className}>
