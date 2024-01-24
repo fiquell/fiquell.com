@@ -8,11 +8,6 @@ export const lineInOut = (
   gsap.from(targets, {
     opacity: 0,
     xPercent,
-    scrollTrigger: {
-      end: "bottom 80%",
-      scrub: 1,
-      start: "top 80%",
-      trigger,
-    },
+    scrollTrigger: { trigger, start: "top 80%", end: "bottom 80%", scrub: 1 },
   });
 };

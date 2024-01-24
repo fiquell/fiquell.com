@@ -1,4 +1,4 @@
-import { gsap } from "gsap";
+import { Expo, gsap } from "gsap";
 
 export const fadeOut = (
   targets: gsap.TweenTarget,
@@ -7,8 +7,8 @@ export const fadeOut = (
 ) => {
   gsap.from(targets, {
     delay,
-    duration: 1,
-    ease: "expo.out",
+    duration: 1.25,
+    ease: Expo.easeOut,
     opacity: 0,
     yPercent,
   });
