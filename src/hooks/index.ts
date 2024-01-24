@@ -1,3 +1,1 @@
-import { useIsomorphic } from "./use-isomorphic";
-
-export { useIsomorphic };
+export * from "./use-isomorphic";
