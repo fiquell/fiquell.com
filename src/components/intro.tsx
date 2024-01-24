@@ -1,31 +1,31 @@
 import { Icon } from "@iconify/react";
 import { gsap } from "gsap";
-import { useRef } from "react";
+import { useRef, type ElementRef } from "react";
 import { Stripes } from "~/components/ui";
 import { bebasneue, developer, end, front } from "~/constants";
 import { useIsomorphic } from "~/hooks";
 import { fadeOut } from "~/utils";
 
 const Intro = () => {
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const frontendRef = useRef<HTMLDivElement | null>(null);
-  const developerRef = useRef<HTMLDivElement | null>(null);
-  const aboutRef = useRef<HTMLDivElement | null>(null);
+  const containerRef = useRef<ElementRef<"section">>(null);
+  const frontendRef = useRef<ElementRef<"div">>(null);
+  const developerRef = useRef<ElementRef<"div">>(null);
+  const aboutRef = useRef<ElementRef<"div">>(null);
 
   useIsomorphic(() => {
     const ctx = gsap.context(() => {
-      fadeOut(frontendRef.current, 0.5, 100);
+      fadeOut(frontendRef.current, 0.3, 100);
       fadeOut(developerRef.current, 0.7, 100);
       fadeOut(aboutRef.current, 0.9, 100);
-    }, sectionRef);
+    }, containerRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section ref={sectionRef} className="container my-10">
+    <section ref={containerRef} className="container my-10">
       <div
-        className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[22rem] ${bebasneue.className}`}>
+        className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[18rem] 2xl:text-[22rem] ${bebasneue.className}`}>
         <div
           ref={frontendRef}
           className="flex flex-col md:flex-row md:items-center md:gap-2 lg:gap-16">
@@ -40,9 +40,9 @@ const Intro = () => {
             ))}
           </div>
           <Stripes className="hidden md:block" />
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5 md:block">
             <Stripes className="block md:hidden" />
-            <div data-cursor-size={150} className="mr-2.5 flex lg:mr-5">
+            <div data-cursor-size={150} className="flex pr-2.5 lg:pr-5">
               {end.map(({ text }, index) => (
                 <p
                   key={index}
@@ -57,7 +57,7 @@ const Intro = () => {
       </div>
       <div className="flex flex-col gap-5 md:-mt-10 md:flex-row md:items-center lg:gap-10">
         <div
-          className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[22rem] ${bebasneue.className}`}>
+          className={`text-[11rem] leading-none tracking-tighter text-accent lg:text-[18rem] 2xl:text-[22rem] ${bebasneue.className}`}>
           <div
             ref={developerRef}
             data-cursor-size={150}
