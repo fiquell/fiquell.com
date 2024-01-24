@@ -1,10 +1,10 @@
 export const title = "Fiquell ✺ Frontend Developer";
 
-const description = [
+export const description = [
   "Crafting captivating websites for exciting online journeys",
 ];
 
-const keywords = [
+export const keywords = [
   "collaboration",
   "creativity",
   "digital experiences",
