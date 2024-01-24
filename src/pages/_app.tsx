@@ -2,7 +2,7 @@ import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import type { AppType } from "next/dist/shared/lib/utils";
+import { type AppType } from "next/dist/shared/lib/utils";
 import Head from "next/head";
 import { useState } from "react";
 import { Cursor } from "react-creative-cursor";
