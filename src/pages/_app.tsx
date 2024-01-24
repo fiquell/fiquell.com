@@ -13,22 +13,12 @@ import { useIsomorphic } from "~/hooks";
 import "~/styles/globals.css";
 
 const App: AppType = ({ Component, pageProps }) => {
-  const [isCursor, setIsCursor] = useState(false);
+  const [isCursor, setIsCursor] = useState<boolean>();
 
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
   useIsomorphic(() => {
-    const lenis = new Lenis({
-      duration: 1.5,
-      lerp: 0.5,
-      normalizeWheel: true,
-      smoothTouch: true,
-      smoothWheel: true,
-      syncTouch: true,
-      syncTouchLerp: 0.5,
-      touchMultiplier: 0.5,
-      wheelMultiplier: 0.5,
-    });
+    const lenis = new Lenis();
 
     const raf = (time: number) => {
       lenis.raf(time);
@@ -58,10 +48,10 @@ const App: AppType = ({ Component, pageProps }) => {
         <Footer />
         {isCursor && (
           <Cursor
+            isGelly={true}
+            cursorSize={0}
             cursorBackgrounColor="#111111"
             cursorInnerColor="#f0cca8"
-            cursorSize={0}
-            isGelly={true}
           />
         )}
       </div>
