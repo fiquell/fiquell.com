@@ -5,14 +5,17 @@ import { useIsomorphic } from "~/hooks";
 import { scrollTo } from "~/utils";
 
 const Footer = () => {
-  const [currentTime, setCurrentTime] = useState("");
+  const [currentTime, setCurrentTime] = useState<string>();
 
   const scrollToHeader = () => scrollTo("#header");
   const updateTime = () => {
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, "0");
-    const minutes = String(now.getMinutes()).padStart(2, "0");
-    setCurrentTime(`${hours}:${minutes}`);
+    const date = new Date();
+    const time = new Intl.DateTimeFormat("id-ID", {
+      timeZone: "Asia/Makassar",
+      hour: "numeric",
+      minute: "numeric",
+    }).format(date);
+    setCurrentTime(time);
   };
 
   useIsomorphic(() => {
@@ -34,7 +37,9 @@ const Footer = () => {
         <Link href="https://github.com/fiquell">
           <Button>GITHUB</Button>
         </Link>
-        <Button onClick={scrollToHeader}>TOP</Button>
+        <Button onClick={scrollToHeader} className="ml-4">
+          TOP
+        </Button>
       </div>
     </footer>
   );
