@@ -4,12 +4,12 @@
   "description": "Crafting captivating websites for exciting online journeys",
   "icons": [
     {
-      "src": "/fiquell-192x192.png",
+      "src": "https://fiquell.com/fiquell-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/fiquell-512x512.png",
+      "src": "https://fiquell.com/fiquell-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
