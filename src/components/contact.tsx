@@ -1,6 +1,6 @@
-import { gsap } from "gsap";
+import { Expo, gsap } from "gsap";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useRef, useState, type ElementRef } from "react";
 import { bebasneue } from "~/constants";
 import { useIsomorphic } from "~/hooks";
 import { lineInOut } from "~/utils";
@@ -8,23 +8,21 @@ import { lineInOut } from "~/utils";
 const Contact = () => {
   const [marqueeTween, setMarqueeTween] = useState<gsap.core.Tween>();
 
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const lineUpRef = useRef<HTMLDivElement | null>(null);
-  const marqueeRef = useRef<HTMLDivElement | null>(null);
-  const lineDownRef = useRef<HTMLDivElement | null>(null);
-  const emailRef = useRef<HTMLParagraphElement | null>(null);
-  const copyTextRef = useRef<HTMLParagraphElement | null>(null);
+  const containerRef = useRef<ElementRef<"section">>(null);
+  const lineUpRef = useRef<ElementRef<"div">>(null);
+  const marqueeRef = useRef<ElementRef<"div">>(null);
+  const lineDownRef = useRef<ElementRef<"div">>(null);
+  const emailRef = useRef<ElementRef<"p">>(null);
+  const tooltipRef = useRef<ElementRef<"p">>(null);
 
-  const copyText = () => {
+  const handleCopyToClipboard = () => {
     if (emailRef.current) {
       void navigator.clipboard.writeText(emailRef.current.textContent ?? "");
-
-      if (copyTextRef.current) {
-        copyTextRef.current.textContent = "COPIED";
-
+      if (tooltipRef.current) {
+        tooltipRef.current.textContent = "COPIED";
         setTimeout(() => {
-          if (copyTextRef.current) {
-            copyTextRef.current.textContent = "CLICK TO COPY";
+          if (tooltipRef.current) {
+            tooltipRef.current.textContent = "CLICK TO COPY";
           }
         }, 2000);
       }
@@ -33,26 +31,14 @@ const Contact = () => {
 
   const onMouseEnter = () => {
     gsap.fromTo(
-      copyTextRef.current,
-      {
-        opacity: 0,
-        y: 10,
-      },
-      {
-        display: "block",
-        ease: "expo.inOut",
-        opacity: 1,
-        y: 0,
-      },
+      tooltipRef.current,
+      { opacity: 0, y: 10 },
+      { display: "block", ease: Expo.easeInOut, opacity: 1, y: 0 },
     );
   };
 
   const onMouseLeave = () => {
-    gsap.to(copyTextRef.current, {
-      ease: "expo.inOut",
-      opacity: 0,
-      y: 10,
-    });
+    gsap.to(tooltipRef.current, { ease: Expo.easeInOut, opacity: 0, y: 10 });
   };
 
   useIsomorphic(() => {
@@ -70,16 +56,16 @@ const Contact = () => {
         );
       }
 
-      lineInOut(lineUpRef.current, -100, sectionRef.current);
-      lineInOut(lineDownRef.current, 100, sectionRef.current);
-    }, sectionRef);
+      lineInOut(lineUpRef.current, -100, containerRef.current);
+      lineInOut(lineDownRef.current, 100, containerRef.current);
+    }, containerRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
     <section
-      ref={sectionRef}
+      ref={containerRef}
       id="contact"
       className="my-20 space-y-10 lg:my-40 lg:space-y-20">
       <div className="container">
@@ -96,7 +82,7 @@ const Contact = () => {
           className="mx-auto h-0.5 w-11/12 rounded-full bg-accent"
         />
         <div
-          className={`my-8 text-9xl leading-none tracking-tighter text-accent lg:text-[13rem] ${bebasneue.className}`}>
+          className={`my-8 text-[9rem] leading-none tracking-tighter text-accent lg:text-[14rem] 2xl:text-[16rem] ${bebasneue.className}`}>
           <div className="transition-slide-up hover:text-primary">
             <div
               ref={marqueeRef}
@@ -122,14 +108,14 @@ const Contact = () => {
       <div className="relative flex flex-col items-center">
         <p
           ref={emailRef}
-          onClick={copyText}
+          onClick={handleCopyToClipboard}
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
-          className="transition-slide-up cursor-pointer text-lg hover:text-primary hover:scale-110 lg:text-2xl">
+          className="transition-slide-up cursor-pointer text-lg hover:text-primary hover:scale-110 lg:text-xl 2xl:text-2xl">
           fiquellh@gmail.com
         </p>
         <p
-          ref={copyTextRef}
+          ref={tooltipRef}
           className="absolute mt-8 hidden rounded-full border-2 border-text px-5 py-2.5 text-sm font-medium md:text-xs lg:mt-10 lg:text-sm">
           CLICK TO COPY
         </p>
