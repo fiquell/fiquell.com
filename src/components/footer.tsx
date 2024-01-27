@@ -37,7 +37,7 @@ const Footer = () => {
         <Link href="https://github.com/fiquell">
           <Button>GITHUB</Button>
         </Link>
-        <Button onClick={scrollToHeader} className="ml-4">
+        <Button onClick={scrollToHeader} className="ml-2">
           TOP
         </Button>
       </div>
