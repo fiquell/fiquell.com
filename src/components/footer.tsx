@@ -10,12 +10,12 @@ const Footer = () => {
   const scrollToHeader = () => scrollTo("#header");
   const updateTime = () => {
     const date = new Date();
-    const time = new Intl.DateTimeFormat("id-ID", {
+    const time = date.toLocaleTimeString("id-ID", {
       timeZone: "Asia/Makassar",
       hour: "numeric",
       minute: "numeric",
-    }).format(date);
-    setCurrentTime(time);
+    });
+    setCurrentTime(time.replace(".", ":"));
   };
 
   useIsomorphic(() => {

@@ -1,6 +1,6 @@
 import { type Config } from "tailwindcss";
 
-export default {
+const config = {
   content: ["./src/**/*.tsx"],
   theme: {
     container: {
@@ -20,3 +20,5 @@ export default {
   },
   plugins: [require("tailwind-scrollbar-hide"), require("tailwindcss-3d")],
 } satisfies Config;
+
+export default config;
