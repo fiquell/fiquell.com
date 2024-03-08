@@ -1,23 +1,35 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import { expoOut } from 'svelte/easing';
-  import { blur } from 'svelte/transition';
+  import { page } from '$app/stores';
+  import { MetaTags } from 'svelte-meta-tags';
   import '../app.pcss';
-
-  let isPageLoaded = false;
-
-  onMount(() => {
-    isPageLoaded = true;
-  });
 </script>
 
-<svelte:head>
-  <title>Fiquell ✺ Web Developer and Designer</title>
-  <meta name="description" content="Crafting captivating websites for exciting online journeys" />
-</svelte:head>
+<MetaTags
+  title="Fiquell"
+  titleTemplate="%s ✺ Web Developer and Designer"
+  robots="index, follow"
+  description="Crafting captivating websites for exciting online journeys"
+  openGraph={{
+    url: $page.url.href,
+    type: 'website',
+    images: [
+      {
+        url: `${$page.url.origin}/og-image.png`,
+        alt: 'Open Graph Image',
+        width: 6912,
+        height: 4468,
+        type: 'image/png'
+      }
+    ]
+  }}
+  additionalMetaTags={[
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'theme-color', content: '#000000' }
+  ]}
+  additionalLinkTags={[
+    { rel: 'icon', href: `${$page.url.origin}/favicon.ico` },
+    { rel: 'apple-touch-icon', href: `${$page.url.origin}/apple-touch-icon.png` },
+    { rel: 'manifest', href: `${$page.url.origin}/manifest.json` }
+  ]} />
 
-{#if isPageLoaded}
-  <main transition:blur={{ delay: 500, duration: 2000, easing: expoOut }} class="container">
-    <slot />
-  </main>
-{/if}
+<slot />
