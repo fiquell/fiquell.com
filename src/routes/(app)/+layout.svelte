@@ -5,9 +5,7 @@
 
   let isPageLoaded = false;
 
-  onMount(() => {
-    isPageLoaded = true;
-  });
+  onMount(() => (isPageLoaded = true));
 </script>
 
 {#if isPageLoaded}
