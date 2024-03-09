@@ -15,10 +15,10 @@
     images: [
       {
         url: `${$page.url.origin}/og-image.png`,
-        alt: 'Open Graph Image',
+        type: 'image/png',
         width: 6912,
         height: 4468,
-        type: 'image/png'
+        alt: 'Open Graph Image'
       }
     ]
   }}
