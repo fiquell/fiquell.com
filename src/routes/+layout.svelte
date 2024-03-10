@@ -10,7 +10,7 @@
   robots="index, follow"
   description="Crafting captivating websites for exciting online journeys"
   openGraph={{
-    url: $page.url.href,
+    url: `${$page.url.origin}/`,
     type: 'website',
     images: [
       {
