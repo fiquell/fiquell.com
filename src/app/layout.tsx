@@ -34,8 +34,8 @@ const RootLayout = ({ children }: React.PropsWithChildren) => {
             "[mask-image:radial-gradient(circle_at_top,theme('colors.base-100'),transparent,transparent)]",
           )}
         />
-        <main>{children}</main>
         <Noise />
+        <main>{children}</main>
         <Indicator />
       </body>
     </html>
