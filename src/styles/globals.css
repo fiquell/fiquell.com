@@ -3,10 +3,19 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  .id-h1 {
+    @apply text-4xl font-extrabold tracking-tight lg:text-5xl;
   }
-  p {
+  .id-h2 {
+    @apply text-3xl font-semibold tracking-tight lg:text-4xl;
+  }
+  .id-h3 {
+    @apply text-2xl font-semibold tracking-tight lg:text-3xl;
+  }
+  .id-h4 {
+    @apply text-xl font-semibold tracking-tight lg:text-2xl;
+  }
+  .id-paragraph {
     @apply leading-7 [&:not(:first-child)]:mt-6;
   }
 }
