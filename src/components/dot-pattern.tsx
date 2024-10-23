@@ -9,7 +9,7 @@ const DotPattern = ({
       width="100%"
       height="100%"
       className={cn(
-        "pointer-events-none absolute -z-50 fill-neutral-content",
+        "pointer-events-none absolute fill-neutral-content",
         className,
       )}
       {...props}>

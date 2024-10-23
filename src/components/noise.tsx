@@ -9,7 +9,7 @@ const Noise = ({
       width="100%"
       height="100%"
       className={cn(
-        "pointer-events-none fixed isolate z-50 opacity-50 mix-blend-soft-light",
+        "pointer-events-none fixed isolate opacity-80 mix-blend-soft-light",
         className,
       )}
       {...props}>
