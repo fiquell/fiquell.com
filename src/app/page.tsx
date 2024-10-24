@@ -1,3 +1,5 @@
+import WaitingListForm from "~/components/waiting-list-form";
+
 const RootPage = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-8">
@@ -8,18 +10,7 @@ const RootPage = () => {
           so the previous version is being re-energized.
         </p>
       </div>
-      <form className="w-full">
-        <div className="flex items-center justify-center gap-2">
-          <input
-            type="email"
-            placeholder="Enter you email address"
-            className="input input-bordered w-full max-w-xs"
-          />
-          <button type="submit" className="btn btn-primary">
-            Notify Me
-          </button>
-        </div>
-      </form>
+      <WaitingListForm />
     </div>
   );
 };
