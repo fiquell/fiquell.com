@@ -1,7 +1,13 @@
-import { Space_Mono, Spline_Sans } from "next/font/google";
+import { Gloock, Space_Mono, Spline_Sans } from "next/font/google";
 
 export const spline_sans = Spline_Sans({
   variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+export const gloock = Gloock({
+  weight: "400",
+  variable: "--font-serif",
   subsets: ["latin"],
 });
 
