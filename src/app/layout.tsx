@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Toaster } from "sonner";
 import DotPattern from "~/components/dot-pattern";
 import Indicator from "~/components/indicator";
 import Noise from "~/components/noise";
@@ -36,7 +37,12 @@ const RootLayout = ({ children }: React.PropsWithChildren) => {
           )}
         />
         <Noise />
-        <main>{children}</main>
+        <main className="container">{children}</main>
+        <Toaster
+          toastOptions={{
+            className: "font-sans",
+          }}
+        />
         <Indicator />
       </body>
     </html>
