@@ -19,8 +19,8 @@ const DotPattern = ({
           width="16"
           height="16"
           patternUnits="userSpaceOnUse"
-          x="4"
-          y="4">
+          x="8"
+          y="8">
           <circle cx="1" cy="1" r="1" />
         </pattern>
       </defs>
