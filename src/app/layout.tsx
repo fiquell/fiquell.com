@@ -12,8 +12,29 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: `${siteConfig.name} - ${siteConfig.tagline}`,
   description: siteConfig.description,
+  openGraph: {
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        alt: siteConfig.tagline,
+        type: "image/png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@_fiquell",
+  },
   icons: {
-    shortcut: "https://fav.farm/🔥",
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon", sizes: "48x48" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
 };
 
