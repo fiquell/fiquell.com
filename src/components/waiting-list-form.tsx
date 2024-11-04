@@ -40,6 +40,7 @@ const WaitingListForm = () => {
       reset();
       toast.error(response.message);
     } catch (error) {
+      console.error(error);
       toast.error("Error processing your request.");
     } finally {
       setLoading(false);

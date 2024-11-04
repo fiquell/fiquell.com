@@ -28,6 +28,7 @@ export const registerWaitingList = async (values: WaitingList) => {
       message: "You've been added to the waiting list.",
     };
   } catch (error) {
+    console.error(error);
     return {
       success: false,
       message: "Error processing your request.",
