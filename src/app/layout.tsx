@@ -23,7 +23,7 @@ export const viewport: Viewport = {
 
 const RootLayout = ({ children }: React.PropsWithChildren) => {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           "font-sans antialiased",
@@ -33,7 +33,7 @@ const RootLayout = ({ children }: React.PropsWithChildren) => {
         )}>
         <DotPattern
           className={cn(
-            "[mask-image:radial-gradient(circle_at_top,theme('colors.base-100'),transparent,transparent)]",
+            "[mask-image:radial-gradient(circle_at_right,theme('colors.base-100'),transparent,transparent)]",
           )}
         />
         <Noise />

@@ -56,7 +56,7 @@ const WaitingListForm = () => {
 
   return (
     <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex justify-center gap-2">
+      <div className="flex gap-2">
         <label className="form-control w-full max-w-sm">
           <input
             {...register("email")}
