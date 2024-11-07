@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const waitingList = z.object({
   email: z.string().email({
-    message: "Invalid email address",
+    message: "Invalid email address.",
   }),
 });
 
