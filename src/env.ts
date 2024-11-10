@@ -13,4 +13,5 @@ export const env = createEnv({
     RESEND_API_KEY: process.env.RESEND_API_KEY,
     RESEND_AUDIENCE_ID: process.env.RESEND_AUDIENCE_ID,
   },
+  skipValidation: process.env.NODE_ENV === "production",
 });
