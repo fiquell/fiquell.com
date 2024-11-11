@@ -5,7 +5,7 @@ const NotFound = () => {
   return (
     <div className="flex min-h-screen flex-col justify-center gap-8">
       <div>
-        <h1 className="id-h1 font-serif">Page Not Found</h1>
+        <h1 className="id-h1 font-serif">Oops! Page not found</h1>
         <p className="id-paragraph">
           The resource you are looking for could not be located.
         </p>
