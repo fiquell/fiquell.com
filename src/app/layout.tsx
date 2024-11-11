@@ -8,6 +8,10 @@ import { mono, sans, serif } from "~/lib/fonts";
 import { cn } from "~/lib/utils";
 import "~/styles/globals.css";
 
+export const viewport: Viewport = {
+  themeColor: siteConfig.color,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: `${siteConfig.name} - ${siteConfig.tagline}`,
@@ -36,10 +40,6 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-touch-icon.png",
   },
-};
-
-export const viewport: Viewport = {
-  themeColor: siteConfig.color,
 };
 
 const RootLayout = ({ children }: React.PropsWithChildren) => {
