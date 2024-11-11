@@ -1,11 +1,10 @@
 "use server";
 
 import { Resend } from "resend";
-import { env } from "~/env";
 import type { WaitingList } from "~/lib/schemas";
 import { waitingList } from "~/lib/schemas";
 
-const resend = new Resend(env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const registerWaitingList = async (values: WaitingList) => {
   try {
@@ -13,7 +12,7 @@ export const registerWaitingList = async (values: WaitingList) => {
     const { error } = await resend.contacts.create({
       email: email,
       unsubscribed: false,
-      audienceId: env.RESEND_AUDIENCE_ID,
+      audienceId: process.env.RESEND_AUDIENCE_ID || "",
     });
 
     if (error) {
