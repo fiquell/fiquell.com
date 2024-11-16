@@ -1,4 +1,4 @@
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { Toaster } from "sonner";
 import Analytics from "~/components/analytics";
@@ -69,6 +69,7 @@ const RootLayout = ({ children }: React.PropsWithChildren) => {
         <Indicator />
         <Analytics />
         <GoogleAnalytics gaId="G-96S64T3GY8" />
+        <GoogleTagManager gtmId="GTM-P6KZ67NJ" />
       </body>
     </html>
   );
